@@ -1,0 +1,43 @@
+--[[
+ ██████████     █████████   ██████   ██████   
+▒▒███▒▒▒▒███   ███▒▒▒▒▒███ ▒▒██████ ██████    
+ ▒███   ▒▒███ ▒███    ▒███  ▒███▒█████▒███    
+ ▒███    ▒███ ▒███████████  ▒███▒▒███ ▒███    
+ ▒███    ▒███ ▒███▒▒▒▒▒███  ▒███ ▒▒▒  ▒███    
+ ▒███    ███  ▒███    ▒███  ▒███      ▒███    
+ ██████████   █████   █████ █████     █████   
+▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒     ▒▒▒▒▒                                                                                                    
+]]
+
+fx_version "cerulean"
+games { "gta5" }
+
+--- Metadata
+name "dam"
+version "1.0.0"
+description "A standalone drawn admin menu for FiveM."
+author "Case"
+lua54 "yes"
+
+--- Core
+shared_scripts {
+    "locales/*.lua",
+    "libs/graft/*.lua",
+
+    "init.lua"
+}
+client_scripts {
+    "libs/drip/*.lua",
+
+    "src/client/menus/*.lua",
+    "src/client/actions/*.lua",
+    "src/client/main.lua"
+}
+server_scripts {
+    "@oxmysql/lib/MySQL.lua",
+    "custom/cfg.lua",
+    "custom/hooks.lua",
+    "src/server/actions/*.lua",
+    "src/server/registry.lua",
+    "src/server/main.lua"
+}
